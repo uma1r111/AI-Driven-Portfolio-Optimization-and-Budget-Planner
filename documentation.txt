@@ -1,0 +1,60 @@
+LSTM.ipynb
+Basic Lstm model that predicts stock prices based on closing prices.
+With default parameters:
+1) input_dim
+2) hidden_dim
+3) output_dim
+4) learning_rate
+
+Now i have yet to add other parameter like:  
+1) dropout(regularization)
+2) Adam optimizer which works well for time-series
+3) sequence length (capture short/long term trends)
+4) batch size
+5) Bidirectional
+
+i will also implement feature engineering. for now the model is only considering
+closing prices but i will add:
+1) moving averages (SMA, EMA)
+2) trading volume
+3) relative strength index (RSI)
+4) moving average convergence/divergence (MACD)
+5) Bollinger Bands (maybe not sure)
+
+LSTM_v2.ipynb
+Mid tier model that predicts stock prices based on closing prices (still).
+With new additional parameters:
+1) input_dim
+2) hidden_dim
+3) output_dim
+4) learning_rate
+5) dropout
+6) adam optimiser
+7) sequence length (pichle kitne dinon ka data chahiye for training)
+
+*Next step will be implementing feature engineering as i mentioned 
+above with maybe batch size implentation
+
+*There is also some issue while training since the loss inc/dec randomly. 
+will fix it as well (issue most probably is that weights arent being updated properly)
+
+i tried implementing bi-directional lstm with same param as before. the code works but the accuracy is really bad.
+i am thinking to use lstm.ipynb file since it is the basic lstm code and then make changes in it again including feature engineering
+since this code gave me best stock price prediction, i will also add adam optimiser to adapt to trends.
+
+LSTM_v3:
+i used the original lstm.ipynb code. it is a vanilla lstm model.
+
+**vanilla lstm model:
+a vanilla LSTM (Long Short-Term Memory) is the basic version of an LSTM neural network. 
+it is a type of Recurrent Neural Network (RNN) specifically designed to learn long-term dependencies
+and solve the vanishing gradient problem that basic RNNs face.
+
+i then implemented backpropagation through time (BPTT) and thr weightsare being updated in both the forward pass
+and the backward pass. For now i am using stochastic gradient descent (SGD) but now in this code i will implement
+ADAM optimiser for better adaptive learning rates for both forward and backward path and additionally 
+add dropout rate so that randomly any neuron can be dropped so that model doesnt overfit or underfit.
+typically i believe our model should overfit since in my experience the stock prices either follow three stages:
+1) uptrend 2) sideways movement 3) downtrend
+in all these cases prices dont fluctuate rapidly so overfitting will do the job unless there is some other factors like
+news, company's financial report or any other reason which makes the stock prices go up or down rapidly
