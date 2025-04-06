@@ -21,6 +21,7 @@ closing prices but i will add:
 4) moving average convergence/divergence (MACD)
 5) Bollinger Bands (maybe not sure)
 
+
 LSTM_v2.ipynb
 Mid tier model that predicts stock prices based on closing prices (still).
 With new additional parameters:
@@ -42,7 +43,8 @@ i tried implementing bi-directional lstm with same param as before. the code wor
 i am thinking to use lstm.ipynb file since it is the basic lstm code and then make changes in it again including feature engineering
 since this code gave me best stock price prediction, i will also add adam optimiser to adapt to trends.
 
-LSTM_v3:
+
+LSTM_v3.ipynb:
 i used the original lstm.ipynb code. it is a vanilla lstm model.
 
 **vanilla lstm model:
@@ -58,3 +60,34 @@ typically i believe our model should overfit since in my experience the stock pr
 1) uptrend 2) sideways movement 3) downtrend
 in all these cases prices dont fluctuate rapidly so overfitting will do the job unless there is some other factors like
 news, company's financial report or any other reason which makes the stock prices go up or down rapidly
+
+
+LSTM_v3_withGraphs.ipynb
+i added some graphs in this notebook and fixed sequence error. the model was being trained on single last sequence but in 
+def create_sequences we were training for 50 days. because of training on single last sequence, the prediction was starting from 0 
+which is abnormal but when fixed (LSTM being trained on 50 sequential days), stock prices prediction was correct. 
+
+
+LSTM_stock_feature_engineering.ipynb
+since our LSTM_v3_withGraphs.ipynb is working correctly with correct backpropagation through time implementation (vanilla)
+so now we need to add more input gates to make the model more robust and accurate. Instead of tempering with LSTM_v3_withGraphs.ipynb
+i created this new file LSTM_stock_feature_engineering.ipynb where i save the stock data imported from yfinance into <ticker>_data.csv 
+then load the csv, perform some feature engineering:
+1) Moving averages (10)
+   Moving averages (50)
+   Moving averages (100)
+   Moving averages (200)
+2) Relative Strength Index (RSI) for 14 days 
+3) Normalized Volume (range 0-1)
+4) Bollinger Band Calculation
+
+i then added these features in <ticker>_stock_features.csv
+i plotted rsi and Bollinger band graph jus to check if they are working fine
+
+*now the next step is to import this data set first in LSTM_v3_withGraphs.ipynb, normalize each feature (volume is already done).
+this way we will have 4/5 input features [closing price, moving avgs, rsi, volume and bollinger band(maybe)]
+we will only have to make small changes in LSTM_v3_withGraphs.ipynb specifically:
+1) class LSTM
+2) def create_sequences
+3) def train
+4) def predict
