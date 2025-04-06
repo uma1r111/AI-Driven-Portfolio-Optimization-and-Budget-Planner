@@ -91,3 +91,25 @@ we will only have to make small changes in LSTM_v3_withGraphs.ipynb specifically
 2) def create_sequences
 3) def train
 4) def predict
+
+LSTM_integration_features.ipynb
+This code is a LSTM_v3_withGraphs.ipynb wrapper. i just imported the <ticker>_stock_features.csv and then used the features 
+[close price(already implemented), RSI, normalized volume, moving averages, bollinger Bands] as input. so now the LSTM model
+is no more vanilla model since now we 5 input gates. 
+for the selection of Moving Averages, i chose MA-100 since used to identify medium-term trends and can be used to confirm
+or deny the trend identified by shorter or longer MAs Can be used to identify support and resistance levels 
+After updating code accordingly, the code is working perfectly. 
+i used 100 epochs with learning rate 0.01 and loss was 0.9. although when i was using vanilla lstm or vanilla lstm with BPTT
+the accuracy was 0.6 with same parameters but there was only one input gate. if i decrease learning rate to 0.005 and increase epochs 
+to 200-300, accuracy of 0.7-0.6 will be easy achievable. 
+
+*next step is to implement more parameters in LSTM_integration_features.ipynb
+1) adam optimiser
+2) dropout rate (important)
+3) batch size
+4) Bidirectional lstm (already implemented in BPTT)
+
+*HOW TO RUN THE SETUP*
+1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
+2)run LSTM_stock_feature_engineering.ipynb
+3)run LSTM_integration_features.ipynb
