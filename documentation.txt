@@ -1,4 +1,4 @@
-LSTM.ipynb
+LSTM_v1(vanilla).ipynb
 Basic Lstm model that predicts stock prices based on closing prices.
 With default parameters:
 1) input_dim
@@ -40,12 +40,12 @@ above with maybe batch size implentation
 will fix it as well (issue most probably is that weights arent being updated properly)
 
 i tried implementing bi-directional lstm with same param as before. the code works but the accuracy is really bad.
-i am thinking to use lstm.ipynb file since it is the basic lstm code and then make changes in it again including feature engineering
+i am thinking to use lstm_v1(vanilla).ipynb file since it is the basic lstm code and then make changes in it again including feature engineering
 since this code gave me best stock price prediction, i will also add adam optimiser to adapt to trends.
 
 
 LSTM_v3.ipynb:
-i used the original lstm.ipynb code. it is a vanilla lstm model.
+i used the original lstm_v1(vanilla).ipynb code. it is a vanilla lstm model.
 
 **vanilla lstm model:
 a vanilla LSTM (Long Short-Term Memory) is the basic version of an LSTM neural network. 
