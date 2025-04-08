@@ -113,3 +113,5 @@ to 200-300, accuracy of 0.7-0.6 will be easy achievable.
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
 2)run LSTM_stock_feature_engineering.ipynb
 3)run LSTM_integration_features.ipynb
+
+Another way of predicting is RNNs
