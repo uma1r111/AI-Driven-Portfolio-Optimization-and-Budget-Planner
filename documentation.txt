@@ -1,3 +1,5 @@
+************* Long Short Term Memory Documentation *************  
+
 LSTM_v1(vanilla).ipynb
 Basic Lstm model that predicts stock prices based on closing prices.
 With default parameters:
