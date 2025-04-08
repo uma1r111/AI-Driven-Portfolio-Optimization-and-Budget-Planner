@@ -109,9 +109,43 @@ to 200-300, accuracy of 0.7-0.6 will be easy achievable.
 3) batch size
 4) Bidirectional lstm (already implemented in BPTT)
 
+
+* the work from here on is done on LSTM_integration_features.ipynb
+
+LSTM_integration_features_dropout_batchsize.ipynb
+adding both dropout and batch size param is not working well. There is a lot of variation when using both together.
+LSTMs are good for long terms but an important thing about them is that they are not very well at memorising multiple
+things simultaneously. The logic of drop out is for adding noise to the neurons in order not to be dependent on any 
+specific neuron. By adding drop out for LSTM cells, there is a chance for forgetting something that should not be forgotten.
+
+* i will now try removing drop out and only implement batch size
+
+LSTM_integration_features_batchsize.ipynb
+in LSTM_integration_features.ipynb, i added batch size as parameter and the results are slightly better but
+not that significant. keeping LSTM_integration_features.ipynb or just adding batch size as parameter wont make such
+a drastic increase in accuracy of stock prediction.
+i will keep this parameter since even a small increase in accuracy while predicting stock prices in win-win.
+
+* i will now try adam optimiser for weight initialisation instead of xavier which we did in LSTM_integration_features.ipynb
+
+LSTM_integration_features_adam.ipynb
+the issue with adam optimiser for weight initialisation is that the prediction of stock is way less than actual
+even when i multiply the weights by 0.1 or 0.05 other than 0.01. if i use large enough number then it would lead to 
+exploding gradients *(gradients become excessively large during backpropagation, potentially causing the
+network to become unstable and fail to learn effectively)
+
+* i then experimented with adam optimiser and batch size
+
+LSTM_integration_features_adam_batchsize.ipynb
+i integrated both adam optimiser and batch size and the code runs accurately. the predicted stock values are much more closer
+to the actual stock price
+
+* i still need to try more experimentation of batch size, adam optimiser and xavier initialisation on other stocks to
+see which parameters works best. 
+
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
 2)run LSTM_stock_feature_engineering.ipynb
-3)run LSTM_integration_features.ipynb
-
-Another way of predicting is RNNs
+3)run LSTM_integration_features.ipynb (uses xavier initialisation)
+4)run LSTM_integration_features_batchsize.ipynb (uses xavier initialisation)
+5)run LSTM_integration_features_adam_batchsize.ipynb
