@@ -145,9 +145,16 @@ to the actual stock price
 * i still need to try more experimentation of batch size, adam optimiser and xavier initialisation on other stocks to
 see which parameters works best. 
 
+* i used microsoft stock (MSFT) for the model 1) LSTM_integration_features_batchsize.ipynb and 2) LSTM_integration_features_adam_batchsize.ipynb
+LSTM_integration_features_batchsize.ipynb gave a good accuracy but it wsa not precise. the predicted stock price was lower than actual for all values
+LSTM_integration_features_adam_batchsize.ipynb gave good accuracy and good score.
+
+* so the only two models that provide accurate and precise results are:
+1) LSTM_integration_features_adam_batchsize.ipynb
+2) LSTM_integration_features.ipynb (uses xavier initialisation)
+
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
 2)run LSTM_stock_feature_engineering.ipynb
 3)run LSTM_integration_features.ipynb (uses xavier initialisation)
-4)run LSTM_integration_features_batchsize.ipynb (uses xavier initialisation)
-5)run LSTM_integration_features_adam_batchsize.ipynb
+4)run LSTM_integration_features_adam_batchsize.ipynb
