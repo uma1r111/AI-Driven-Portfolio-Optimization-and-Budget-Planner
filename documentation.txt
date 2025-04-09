@@ -153,8 +153,16 @@ LSTM_integration_features_adam_batchsize.ipynb gave good accuracy and good score
 1) LSTM_integration_features_adam_batchsize.ipynb
 2) LSTM_integration_features.ipynb (uses xavier initialisation)
 
+* i created a new file : LSTM_integration_features_adam_batchsize (final).ipynb
+i integrated the output which was required in section 3.3 of the proposal which were
+stock return and volatility. 
+
+the final .csv file is located in CSVs folder (results_with_errors.csv)
+
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
 2)run LSTM_stock_feature_engineering.ipynb
 3)run LSTM_integration_features.ipynb (uses xavier initialisation)
 4)run LSTM_integration_features_adam_batchsize.ipynb
+
+
