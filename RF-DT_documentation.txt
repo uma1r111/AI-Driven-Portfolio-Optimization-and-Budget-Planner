@@ -35,3 +35,10 @@ i then used seq_length=20, the predicted stock price is now more accurate but ti
 will we implement that here maybe loop the model and save the parameters in dict for certain number of iterations ?
 
 but for now this basic code does the job 70%
+
+RF-DT_v2.ipynb
+i implemented max_features -> options = [None, "sqrt", "log2", 5, 10], for different parameters, diff max_features gave less MSE
+but the issue is that RF-DT is not made for time series data, like for uptrend, it does capture the trend but when there are
+complex patterns like higher highs/low, lower highs/lows, the model struggles to capture the data, predicting an almost constant value
+with less variation. even if i make a robust model out of it, whenever i will input a new stock with complex pattern, i will
+have to repeat this whole parameter tuning step again again to make the model robust. 
