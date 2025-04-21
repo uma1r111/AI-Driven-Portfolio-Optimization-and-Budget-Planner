@@ -159,6 +159,16 @@ stock return and volatility.
 
 the final .csv file is located in CSVs folder (results_with_errors.csv)
 
+*now the potential issue with finalised LSTM model is that i have to train model for each stock which means different values
+for each parameters(close price, volume, rsi, MA, bollinger bands). because of this i would have to manually set parameters
+for each stock and even then i wouldnt know if that model will predict correctly so a lot of time will be put in optimising the 
+model for each stock
+
+*for this i am using a library based LSTM model (implementation of my finalised scratch LSTM code through libraries)
+i might use optuna for parameter tuning for better prediction.
+
+
+
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
 2)run LSTM_stock_feature_engineering.ipynb
