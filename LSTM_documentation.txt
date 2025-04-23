@@ -168,6 +168,16 @@ model for each stock
 i might use optuna for parameter tuning for better prediction.
 
 
+for now i created a FINAL_LSTM model where i will create the final model. i have created a stock_feature_engineering.ipynb 
+which has feature engineering pipeline. it uses s&p 100 index as its base core and use the data of these 100 companies.
+it has two folders:
+1) basic_CSVs: CSVs of 100 stocks with basic features like close price, day high, day low etc
+2) detailed_CSVs: CSVs of 100 stocks with detailed features like RSI, BB, MA, Pct_Change, Log_Returns etc
+After this, i have created a combined_stock_features.csv which has all the data from detailed_CSVs in it with ticker name as well
+
+This combined_stock_features.csv will be used as the input to the LSTM model i created (scratch or library version idk yet)
+it will be given these inputs and maybe ticker to learn - a more generalizable model.
+
 
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
