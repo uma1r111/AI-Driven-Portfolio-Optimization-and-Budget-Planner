@@ -178,6 +178,15 @@ After this, i have created a combined_stock_features.csv which has all the data 
 This combined_stock_features.csv will be used as the input to the LSTM model i created (scratch or library version idk yet)
 it will be given these inputs and maybe ticker to learn - a more generalizable model.
 
+i trained the model on the entire csv with ticker embeddings (label encoding). i preferred label encoding over one-hot encoding
+since one-hot encoding would result in matrix of dimension 100. now the issue with this code is that it takes a lot of time to run
+since i have 79,087 rows , it will take around 12+ hours to run, what i can do now is reduce epoch size from 150 to 50, or
+use JAX implementation which is specifically designed for numpy Calculations, there will be few changes in code but code will
+run faster. 
+
+first i will check running the code for 50 epochs and see how fast does it run but if it is taking a lot of time, i will use 
+JAX implementation
+
 
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
