@@ -201,7 +201,22 @@ since our seq_length is 50 and we have 51 data points so there will only be one 
 *so near to the perfect model yet so close:
 the only thing left to do is fix the dataset and run the code and see how accurately model predicts Log_Returns
 
-*i may increase start_date and end_date to 2022-01-01 - 2024-01-01 if it doesnt take a lot of time. 
+*i may increase start_date and end_date to 2022-01-01 - 2024-01-01 if it doesnt take a lot of time.
+
+New Folder: LSTM_FINALISED
+
+1) the error i was getting for log_return (only one value), i fixed it
+
+Finalised_LSTM.ipynb
+model working fine as of now, returning both volatility and Log_Returns as expected in csv format
+but there is leaking issue (exploding/vanishing gradient) for sigmoid maybe because the output is way too small or large
+or there are some features which are not normalized so i have to fix it
+
+*new approach
+i will feed the stock data to lstm sector wise since trends in sector are similar to each other and it would be more specific
+and accurate just like hedge funds do in their modelling.
+for now output is in line to proceed ahead.
+
 
 
 *HOW TO RUN THE SETUP*
