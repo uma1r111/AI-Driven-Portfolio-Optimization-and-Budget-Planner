@@ -217,6 +217,19 @@ i will feed the stock data to lstm sector wise since trends in sector are simila
 and accurate just like hedge funds do in their modelling.
 for now output is in line to proceed ahead.
 
+New Folder: LSTM_Sector
+
+lstm_data_new_pipeline.ipynb
+so i made a new data pipeline for this, it is similar to yfinance which we were creating before but now i have added sectors
+in them beside each ticker.
+
+LFGGGG_LSTM.ipynb
+in this code there are two embeddings (ticker and sector),
+in this code i tried a new approach:
+i divided the s&p 100 stocks sector wise, there were some sectors which had <4 stocks so i integrated them together in a new sector
+i trained 8 different lstm for each sector, for each sector's stock, the stocks in that sector will be used, out of which i used
+some stocks for training and some for testing.
+the accuracy is high and outputs are good enough to finalise the part of project.
 
 
 *HOW TO RUN THE SETUP*
