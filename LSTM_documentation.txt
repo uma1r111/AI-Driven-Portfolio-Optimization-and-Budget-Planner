@@ -231,6 +231,12 @@ i trained 8 different lstm for each sector, for each sector's stock, the stocks 
 some stocks for training and some for testing.
 the accuracy is high and outputs are good enough to finalise the part of project.
 
+New Folder: LSTM_WalkForward
+
+walk_forward_pipeline.ipynb:
+data from 2023-01-01 till 2025-01-01. 
+i will use it to implement walk forward validation for future prediction in lstm code.
+
 
 *HOW TO RUN THE SETUP*
 1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
