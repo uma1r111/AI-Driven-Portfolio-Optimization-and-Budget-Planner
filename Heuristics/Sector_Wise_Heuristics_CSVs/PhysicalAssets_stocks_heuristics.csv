@@ -1,0 +1,9 @@
+Stock,Sector,Best Heuristic,Best Equation
+AMT,Physical Assets & Resources,0.8675,Custom
+COP,Physical Assets & Resources,0.7985,Sharpe
+CVX,Physical Assets & Resources,0.7081,Custom
+DOW,Physical Assets & Resources,0.6524,Custom
+DUK,Physical Assets & Resources,0.5605,Custom
+EXC,Physical Assets & Resources,0.6871,Custom
+LIN,Physical Assets & Resources,0.866,Kelly
+NEE,Physical Assets & Resources,0.972,Custom
