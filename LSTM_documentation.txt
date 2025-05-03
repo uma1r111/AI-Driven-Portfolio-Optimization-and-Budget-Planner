@@ -223,7 +223,7 @@ lstm_data_new_pipeline.ipynb
 so i made a new data pipeline for this, it is similar to yfinance which we were creating before but now i have added sectors
 in them beside each ticker.
 
-LFGGGG_LSTM.ipynb
+sector_LSTM.ipynb
 in this code there are two embeddings (ticker and sector),
 in this code i tried a new approach:
 i divided the s&p 100 stocks sector wise, there were some sectors which had <4 stocks so i integrated them together in a new sector
@@ -237,11 +237,27 @@ walk_forward_pipeline.ipynb:
 data from 2023-01-01 till 2025-01-01. 
 i will use it to implement walk forward validation for future prediction in lstm code.
 
+walk_forward_LSTM.ipynb
+i updated the sector_LSTM.ipynb and implemented walk forward validation
+what it does is this:
+start 2023-01-01
+end 2025-01-01
 
-*HOW TO RUN THE SETUP*
-1)look into LSTM_v1(vanilla).ipynb, LSTM_v2, LSTM_v3_withGraphs (DONT RUN)
-2)run LSTM_stock_feature_engineering.ipynb
-3)run LSTM_integration_features.ipynb (uses xavier initialisation)
-4)run LSTM_integration_features_adam_batchsize.ipynb
+
+
+walk0: train   2023-01-03 to 2024-01-01
+       predict 2024-01-01 - 2024-01-31
+
+walk1: train 2023-02-03 to 2024-01-31
+       predict 2024-02-01 - 2024-02-28
+
+and so on.
+
+
+How to run (LSTM_WalkForward and LSTM_Sector)
+1) first run lstm_sector_pipeline.ipynb for LSTM_Sector and lstm_walk_forward_pipeline.ipynb for LSTM_WalkForward
+2) CSV will be generated: combined_stock_features.csv
+3) import it into the model and run the model (sector_LSTM.ipynb and walk_forward_LSTM.ipynb)
+
 
 
