@@ -254,10 +254,14 @@ walk1: train 2023-02-03 to 2024-01-31
 and so on.
 
 
+walk_forward_pipeline_Updated.ipynb:
+i added error calculation and generated log_returns predicted vs actual graph for each sector
+
+
 How to run (LSTM_WalkForward and LSTM_Sector)
 1) first run lstm_sector_pipeline.ipynb for LSTM_Sector and lstm_walk_forward_pipeline.ipynb for LSTM_WalkForward
 2) CSV will be generated: combined_stock_features.csv
-3) import it into the model and run the model (sector_LSTM.ipynb and walk_forward_LSTM.ipynb)
+3) import it into the model and run the model (sector_LSTM.ipynb and walk_forward_LSTM_Updated.ipynb)
 
 
 
