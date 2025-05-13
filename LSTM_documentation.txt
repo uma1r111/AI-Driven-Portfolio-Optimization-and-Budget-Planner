@@ -257,6 +257,14 @@ and so on.
 walk_forward_pipeline_Updated.ipynb:
 i added error calculation and generated log_returns predicted vs actual graph for each sector
 
+walk_forward_LSTM_Updated.ipynb
+added error evaluation and log_return graph (predicted vs actual) at the end of each sector's testing after 
+model completes its epoch .
+
+walk_forward_LSTM_Updated_Efficient.ipynb
+removed redundant code that was being repeated in every sector. 
+created few functions that work for overall sectors
+
 
 How to run (LSTM_WalkForward and LSTM_Sector)
 1) first run lstm_sector_pipeline.ipynb for LSTM_Sector and lstm_walk_forward_pipeline.ipynb for LSTM_WalkForward
