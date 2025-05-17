@@ -1,0 +1,11 @@
+Stock,Sector,Best Heuristic,Best Equation
+BA,Industrials,0.7125,Kelly
+CAT,Industrials,0.8632,Sharpe
+EMR,Industrials,0.768,Sharpe
+FDX,Industrials,0.7459,Sharpe
+GD,Industrials,0.8207,Kelly
+GE,Industrials,0.99,Sortino
+HON,Industrials,0.5864,Kelly
+LMT,Industrials,0.985,Custom
+MMM,Industrials,0.6041,Sharpe
+RTX,Industrials,0.6608,Kelly

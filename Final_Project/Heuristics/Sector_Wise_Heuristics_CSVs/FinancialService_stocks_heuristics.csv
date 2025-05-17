@@ -1,0 +1,14 @@
+Stock,Sector,Best Heuristic,Best Equation
+AIG,Financial Services,0.982,Sharpe
+AXP,Financial Services,0.4772,Custom
+BAC,Financial Services,0.4696,Sharpe
+BK,Financial Services,0.486,Sharpe
+BLK,Financial Services,0.5111,Kelly
+C,Financial Services,0.3434,Kelly
+COF,Financial Services,0.5001,Sharpe
+GS,Financial Services,0.966,Custom
+JPM,Financial Services,0.5136,Kelly
+MA,Financial Services,0.6235,Kelly
+MET,Financial Services,0.4018,Sharpe
+MS,Financial Services,0.4548,Sharpe
+PYPL,Financial Services,0.1713,Custom

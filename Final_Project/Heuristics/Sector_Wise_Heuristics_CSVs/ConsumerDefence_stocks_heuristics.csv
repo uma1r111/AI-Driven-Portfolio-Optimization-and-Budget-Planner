@@ -1,0 +1,10 @@
+Stock,Sector,Best Heuristic,Best Equation
+CL,Consumer Defense,0.2132,Sharpe
+COST,Consumer Defense,0.897,Sharpe
+KHC,Consumer Defense,0.982,Custom
+KO,Consumer Defense,0.8905,Sharpe
+MDLZ,Consumer Defense,0.0899,Sharpe
+MO,Consumer Defense,0.2279,Custom
+PEP,Consumer Defense,0.3869,Sharpe
+PG,Consumer Defense,0.3274,Sharpe
+PM,Consumer Defense,0.4024,Custom

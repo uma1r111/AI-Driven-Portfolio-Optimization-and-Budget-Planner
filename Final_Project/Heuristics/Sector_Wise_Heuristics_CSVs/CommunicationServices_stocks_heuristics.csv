@@ -1,0 +1,7 @@
+Stock,Sector,Best Heuristic,Best Equation
+CHTR,Communication Services,0.2759,Sharpe
+CMCSA,Communication Services,0.3198,Sharpe
+DIS,Communication Services,0.781,Sharpe
+GOOG,Communication Services,1,Custom
+META,Communication Services,0.5055,Sharpe
+NFLX,Communication Services,0.44,Kelly

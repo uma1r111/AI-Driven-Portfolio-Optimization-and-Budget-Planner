@@ -1,0 +1,9 @@
+Stock,Sector,Best Heuristic,Best Equation
+AMZN,Consumer Cyclical,1,Sharpe
+BKNG,Consumer Cyclical,0.997,Custom
+F,Consumer Cyclical,0.1801,Sharpe
+GM,Consumer Cyclical,0.0163,Custom
+HD,Consumer Cyclical,0.4326,Kelly
+LOW,Consumer Cyclical,0.2018,Sharpe
+MCD,Consumer Cyclical,0.499,Sharpe
+NKE,Consumer Cyclical,0.0592,Sharpe

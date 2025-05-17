@@ -1,0 +1,13 @@
+Stock,Sector,Best Heuristic,Best Equation
+ABBV,Healthcare,0.7566,Sortino
+ABT,Healthcare,1,Sortino
+AMGN,Healthcare,0.4145,Kelly
+BMY,Healthcare,0.8941,Custom
+CVS,Healthcare,0.5755,Custom
+DHR,Healthcare,0.9871,Sortino
+GILD,Healthcare,0.3562,Sortino
+JNJ,Healthcare,0.986,Custom
+LLY,Healthcare,1,Kelly
+MDT,Healthcare,0.5855,Sortino
+MRK,Healthcare,0.3582,Sortino
+PFE,Healthcare,0.7629,Custom
